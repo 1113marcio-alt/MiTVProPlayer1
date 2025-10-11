@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.MiTVProPlayer1" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/primary_orange</item>
+        <item name="colorPrimaryVariant">@color/accent_orange</item>
         <item name="colorOnPrimary">@color/white</item>
         
         <!-- Secondary brand color. -->
@@ -15,14 +15,20 @@
         <item name="android:colorBackground">@color/background</item>
         <item name="backgroundColor">@color/background</item>
         <item name="android:windowBackground">@color/background</item>
+        <item name="colorBackground">@color/background</item>
+        
+        <!-- Surface color -->
+        <item name="colorSurface">@color/surface</item>
+        
+        <!-- On background color -->
+        <item name="colorOnBackground">@color/onBackground</item>
         
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        
-        <!-- Remove any Leanback references -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
     </style>
 
-    <!-- Theme for toolbars -->
+    <!-- Toolbar theme -->
     <style name="ThemeOverlay.MiTVProPlayer1.Toolbar" parent="">
         <item name="colorOnPrimary">@color/white</item>
     </style>
