@@ -32,7 +32,7 @@ class ChannelAdapter(
         holder.channelName.text = channel.name
         holder.channelGroup.text = channel.group ?: "Geral"
         
-        // Aqui vamos carregar o logo do canal depois
+        // TODO: Carregar logo do canal depois
         // holder.channelLogo.setImageURI(channel.logo)
         
         holder.itemView.setOnClickListener {
