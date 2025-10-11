@@ -10,6 +10,6 @@ class VODFragment : Fragment(R.layout.fragment_vod) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        // Aqui vamos adicionar os filmes e VOD
+        // Tela de Vídeo sob Demanda - Filmes e séries
     }
 }
