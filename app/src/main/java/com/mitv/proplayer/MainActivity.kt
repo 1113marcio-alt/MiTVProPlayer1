@@ -1,27 +1,16 @@
-package com.mitv.proplayer
+package com.mitv.proplayer.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.mitv.proplayer.databinding.ActivityMainBinding
-import com.mitv.proplayer.ui.fragments.HomeFragment
+import com.mitv.proplayer.R
 
 class MainActivity : AppCompatActivity() {
     
-    private lateinit var binding: ActivityMainBinding
-    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
         
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        
-        setupHomeFragment()
-    }
-    
-    private fun setupHomeFragment() {
-        val fragment = HomeFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(binding.fragmentContainer.id, fragment)
-            .commit()
+        // Log para debug
+        println("✅ MiTV Pro Player - App iniciado!")
     }
 }
