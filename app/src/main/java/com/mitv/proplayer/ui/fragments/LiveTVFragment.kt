@@ -21,7 +21,10 @@ class LiveTVFragment : Fragment(R.layout.fragment_live_tv) {
         Channel("2", "BBC World", "http://example.com/bbc.m3u8", null, "News", false),
         Channel("3", "Sport TV", "http://example.com/sport.m3u8", null, "Sports", false),
         Channel("4", "Movie Channel", "http://example.com/movie.m3u8", null, "Movies", false),
-        Channel("5", "Music TV", "http://example.com/music.m3u8", null, "Music", false)
+        Channel("5", "Music TV", "http://example.com/music.m3u8", null, "Music", false),
+        Channel("6", "Kids Channel", "http://example.com/kids.m3u8", null, "Kids", false),
+        Channel("7", "Documentary", "http://example.com/doc.m3u8", null, "Documentary", false),
+        Channel("8", "News 24/7", "http://example.com/news.m3u8", null, "News", false)
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -33,13 +36,13 @@ class LiveTVFragment : Fragment(R.layout.fragment_live_tv) {
     }
 
     private fun setupRecyclerView() {
-        channelAdapter = ChannelAdapter(sampleChannels) { channel ->
+        channelAdapter = ChannelAdapter(emptyList()) { channel ->
             // TODO: Abrir player quando clicar no canal
-            println("Canal clicado: ${channel.name}")
+            onChannelClicked(channel)
         }
 
         binding.channelsRecyclerView.apply {
-            layoutManager = GridLayoutManager(requireContext(), 3) // 3 colunas
+            layoutManager = GridLayoutManager(requireContext(), 4) // 4 colunas para TV
             adapter = channelAdapter
             setHasFixedSize(true)
         }
@@ -51,7 +54,15 @@ class LiveTVFragment : Fragment(R.layout.fragment_live_tv) {
         channelAdapter.notifyDataSetChanged()
         
         // Mostrar quantos canais carregados
-        binding.tvChannelCount.text = "Canais: ${sampleChannels.size}"
+        binding.tvChannelCount.text = "Total: ${sampleChannels.size} canais"
+    }
+
+    private fun onChannelClicked(channel: Channel) {
+        // TODO: Implementar abertura do player
+        println("🎬 Canal clicado: ${channel.name}")
+        
+        // Mostrar mensagem temporária
+        binding.tvStatus.text = "Abrindo: ${channel.name}"
     }
 
     override fun onDestroyView() {
