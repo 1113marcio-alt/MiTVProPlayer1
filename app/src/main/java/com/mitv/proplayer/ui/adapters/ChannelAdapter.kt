@@ -38,6 +38,17 @@ class ChannelAdapter(
         holder.itemView.setOnClickListener {
             onChannelClick(channel)
         }
+        
+        // Efeito de foco para TV (Android TV)
+        holder.itemView.setOnFocusChangeListener { view, hasFocus ->
+            if (hasFocus) {
+                view.animate().scaleX(1.1f).scaleY(1.1f).setDuration(200).start()
+                view.elevation = 8f
+            } else {
+                view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(200).start()
+                view.elevation = 2f
+            }
+        }
     }
 
     override fun getItemCount(): Int = channels.size
