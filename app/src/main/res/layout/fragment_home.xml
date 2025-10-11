@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MiTV Pro Player"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <!-- Navigation Menu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_live_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TV ao Vivo"
+            android:textColor="@color/white"
+            android:background="@color/purple_500"
+            android:layout_marginEnd="10dp" />
+
+        <Button
+            android:id="@+id/btn_vod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VOD"
+            android:textColor="@color/white"
+            android:background="@color/purple_500"
+            android:layout_marginEnd="10dp" />
+
+        <Button
+            android:id="@+id/btn_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configurações"
+            android:textColor="@color/white"
+            android:background="@color/purple_500" />
+
+    </LinearLayout>
+
+    <!-- Content Area -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
