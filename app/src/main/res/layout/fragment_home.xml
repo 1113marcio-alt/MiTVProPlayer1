@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MiTV Pro Player"
-        android:textColor="#FF6D00"
+        android:textColor="@color/primary"
         android:textSize="32sp"
         android:textStyle="bold"
         android:layout_marginBottom="60dp" />
@@ -51,13 +51,13 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:src="@android:drawable/ic_media_play"
-                    android:tint="#FF6D00" />
+                    android:tint="@color/primary" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="LIVE TV"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_marginTop="12dp" />
@@ -90,13 +90,13 @@
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:src="@android:drawable/ic_menu_manage"
-                    android:tint="#FF6D00" />
+                    android:tint="@color/primary" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SETTINGS"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/text_primary"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_marginTop="12dp" />
