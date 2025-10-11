@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MiTV Pro Player</string>
+    <string name="live_tv">TV ao Vivo</string>
+    <string name="vod">Vídeo sob Demanda</string>
+    <string name="settings">Configurações</string>
+</resources>
