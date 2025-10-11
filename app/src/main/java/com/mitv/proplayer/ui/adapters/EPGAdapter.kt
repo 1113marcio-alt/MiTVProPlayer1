@@ -29,11 +29,27 @@ class EPGAdapter(
         val program = programs[position]
         
         holder.programTitle.text = program.title
-        holder.programTime.text = "20:00 - 21:00" // TODO: Format time
+        holder.programTime.text = "20:00 - 21:00" // TODO: Format time properly
         holder.programDescription.text = program.description ?: "Sem descrição"
+        
+        // Destacar programa atual
+        if (program.isCurrent) {
+            holder.itemView.setBackgroundColor(0xFFBB86FC.toInt())
+        } else {
+            holder.itemView.setBackgroundColor(0xFF2D2D2D.toInt())
+        }
         
         holder.itemView.setOnClickListener {
             onProgramClick(program)
+        }
+        
+        // Efeito de foco para TV
+        holder.itemView.setOnFocusChangeListener { view, hasFocus ->
+            if (hasFocus) {
+                view.animate().scaleX(1.05f).scaleY(1.05f).setDuration(200).start()
+            } else {
+                view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(200).start()
+            }
         }
     }
 
