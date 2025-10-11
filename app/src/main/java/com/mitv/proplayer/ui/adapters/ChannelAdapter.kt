@@ -1,0 +1,44 @@
+package com.mitv.proplayer.ui.adapters
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.mitv.proplayer.R
+import com.mitv.proplayer.models.Channel
+
+class ChannelAdapter(
+    private val channels: List<Channel>,
+    private val onChannelClick: (Channel) -> Unit
+) : RecyclerView.Adapter<ChannelAdapter.ChannelViewHolder>() {
+
+    class ChannelViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val channelName: TextView = itemView.findViewById(R.id.channel_name)
+        val channelLogo: ImageView = itemView.findViewById(R.id.channel_logo)
+        val channelGroup: TextView = itemView.findViewById(R.id.channel_group)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChannelViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_channel, parent, false)
+        return ChannelViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: ChannelViewHolder, position: Int) {
+        val channel = channels[position]
+        
+        holder.channelName.text = channel.name
+        holder.channelGroup.text = channel.group ?: "Geral"
+        
+        // Aqui vamos carregar o logo do canal depois
+        // holder.channelLogo.setImageURI(channel.logo)
+        
+        holder.itemView.setOnClickListener {
+            onChannelClick(channel)
+        }
+    }
+
+    override fun getItemCount(): Int = channels.size
+}
