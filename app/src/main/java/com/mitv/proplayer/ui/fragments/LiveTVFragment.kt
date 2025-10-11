@@ -10,7 +10,6 @@ class LiveTVFragment : Fragment(R.layout.fragment_live_tv) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        // Aqui vamos adicionar a lista de canais ao vivo
-        // igual ao MyTVOnline 3
+        // Tela de TV ao vivo - Lista de canais
     }
 }
