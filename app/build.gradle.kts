@@ -1,14 +1,14 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.mitv.proplayer"
+    namespace = "com.example.mitvproplayer"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.mitv.proplayer"
+        applicationId = "com.example.mitvproplayer"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -35,26 +35,25 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
+    
     buildFeatures {
         viewBinding = true
     }
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.leanback:leanback:1.2.0-alpha04")
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
     
-    // ✅ EXOPLAYER - ADICIONE ESTAS LINHAS
-    implementation("com.google.android.exoplayer:exoplayer:2.19.1")
-    implementation("com.google.android.exoplayer:exoplayer-core:2.19.1")
-    implementation("com.google.android.exoplayer:exoplayer-ui:2.19.1")
-    implementation("com.google.android.exoplayer:extension-leanback:2.19.1")
+    // DEPENDÊNCIAS ADICIONAIS NECESSÁRIAS
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
     
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
