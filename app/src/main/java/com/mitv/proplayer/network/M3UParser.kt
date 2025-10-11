@@ -29,24 +29,20 @@ class M3UParser {
     }
     
     private fun parseExtinfLine(extinfLine: String): Channel {
-        // Exemplo: #EXTINF:-1 tvg-id="CNN" tvg-name="CNN" group-title="News",CNN International
         var channelName = "Canal"
         var groupTitle: String? = null
         var logoUrl: String? = null
         
         try {
-            // Extrair nome do canal (depois da última vírgula)
             val nameStart = extinfLine.lastIndexOf(",") + 1
             if (nameStart > 0) {
                 channelName = extinfLine.substring(nameStart).trim()
             }
             
-            // Extrair group-title
             val groupRegex = "group-title=\"([^\"]+)\"".toRegex()
             val groupMatch = groupRegex.find(extinfLine)
             groupTitle = groupMatch?.groupValues?.get(1)
             
-            // Extrair tvg-logo
             val logoRegex = "tvg-logo=\"([^\"]+)\"".toRegex()
             val logoMatch = logoRegex.find(extinfLine)
             logoUrl = logoMatch?.groupValues?.get(1)
@@ -58,7 +54,7 @@ class M3UParser {
         return Channel(
             id = System.currentTimeMillis().toString(),
             name = channelName,
-            url = "", // URL será adicionada depois
+            url = "",
             logo = logoUrl,
             group = groupTitle
         )
