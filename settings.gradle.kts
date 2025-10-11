@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MiTV Pro Player"
+rootProject.name = "MiTVProPlayer1"
 include(":app")
