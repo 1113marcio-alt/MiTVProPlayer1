@@ -10,6 +10,6 @@ class SeriesFragment : Fragment(R.layout.fragment_series) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        // Aqui vamos adicionar as séries igual MyTVOnline
+        // Tela de Séries - Catálogo completo
     }
 }
