@@ -56,4 +56,8 @@ class PlayerController(context: Context) {
     fun isPlaying(): Boolean {
         return exoPlayer?.isPlaying ?: false
     }
+    
+    fun getCurrentChannel(): Channel? {
+        return currentChannel
+    }
 }
