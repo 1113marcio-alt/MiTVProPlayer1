@@ -2,5 +2,10 @@
     <string name="app_name">MiTV Pro Player</string>
     <string name="live_tv">TV ao Vivo</string>
     <string name="vod">Vídeo sob Demanda</string>
+    <string name="series">Séries</string>
     <string name="settings">Configurações</string>
+    <string name="search">Pesquisar</string>
+    <string name="favorites">Favoritos</string>
+    <string name="recordings">Gravações</string>
+    <string name="home_welcome">Bem-vindo ao MiTV Pro Player</string>
 </resources>
