@@ -10,7 +10,6 @@ class SettingsFragment : Fragment(R.layout.fragment_settings) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        // Aqui vamos adicionar as configurações do app
-        // igual ao MyTVOnline 3
+        // Configurações do aplicativo
     }
 }
