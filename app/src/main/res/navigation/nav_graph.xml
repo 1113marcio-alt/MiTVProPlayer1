@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- Fragmento Home -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mitvproplayer.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        
+        <!-- Ação para navegar para LiveTV -->
+        <action
+            android:id="@+id/action_home_to_liveTV"
+            app:destination="@id/liveTVFragment" />
+    </fragment>
+
+    <!-- Fragmento Live TV -->
+    <fragment
+        android:id="@+id/liveTVFragment"
+        android:name="com.example.mitvproplayer.LiveTVFragment"
+        android:label="Live TV"
+        tools:layout="@layout/fragment_live_tv" />
+
+</navigation>
