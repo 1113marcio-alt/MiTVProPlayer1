@@ -23,17 +23,16 @@ class VideoPlayerActivity : AppCompatActivity() {
     private fun setupPlayer() {
         playerView = findViewById(R.id.player_view)
         
-        // Criar o player ExoPlayer
+        // Criar o player ExoPlayer (vamos configurar depois)
         exoPlayer = ExoPlayer.Builder(this).build()
         playerView.player = exoPlayer
         
-        // Aqui vamos conectar com a URL do canal
-        val videoUrl = "https://example.com/stream.m3u8" // URL exemplo
+        // URL exemplo - depois vamos conectar com os canais reais
+        val videoUrl = "https://example.com/stream.m3u8"
         
         val mediaItem = MediaItem.fromUri(Uri.parse(videoUrl))
         exoPlayer?.setMediaItem(mediaItem)
         exoPlayer?.prepare()
-        exoPlayer?.play()
     }
     
     override fun onDestroy() {
