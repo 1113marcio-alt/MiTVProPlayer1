@@ -4,46 +4,30 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background"
-    android:padding="20dp">
+    android:padding="16dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guia de Programação (EPG)"
+        android:text="Guia de Programação"
         android:textColor="@color/white"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Grade de programação igual MyTVOnline 3"
+        android:text="EPG - Estilo MyTVOnline"
         android:textColor="@color/purple_200"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp" />
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="• Canais na vertical"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginTop="20dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="• Programas na horizontal"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginTop="10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="• Navegação por dias"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        android:layout_marginTop="10dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/epg_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="8dp" />
 
 </LinearLayout>
