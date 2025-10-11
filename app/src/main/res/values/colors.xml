@@ -10,4 +10,22 @@
     
     <!-- CORES DO APP -->
     <color name="background">#0D0D0D</color>
+    <color name="on_background">#FFFFFF</color>
+    <color name="surface">#1A1A1A</color>
+    <color name="on_surface">#FFFFFF</color>
+    <color name="primary">#FF6D00</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_dark">#1A1A1A</color>
+    <color name="accent_orange">#FF9800</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#666666</color>
+    <color name="border_color">#333333</color>
+    
+    <!-- CORES PARA NAVEGAÇÃO -->
+    <color name="bottom_nav_colors">#FFFFFFFF</color>
+    
+    <!-- CORES ADICIONAIS -->
+    <color name="error">#FF0000</color>
+    <color name="success">#00FF00</color>
+    <color name="warning">#FFFF00</color>
 </resources>
