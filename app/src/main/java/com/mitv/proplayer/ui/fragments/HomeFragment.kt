@@ -10,7 +10,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        // Aqui vamos adicionar a lista de canais recentes
-        // igual ao MyTVOnline 3
+        // Tela inicial do MiTV Pro Player
+        // Aqui vamos adicionar os canais recentes e recomendações
     }
 }
