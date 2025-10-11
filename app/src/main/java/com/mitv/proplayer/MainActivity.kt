@@ -3,6 +3,7 @@ package com.mitv.proplayer
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.mitv.proplayer.databinding.ActivityMainBinding
+import com.mitv.proplayer.ui.fragments.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     
@@ -14,12 +15,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         
-        // App inicializado com sucesso!
-        setupUI()
+        setupHomeFragment()
     }
     
-    private fun setupUI() {
-        // Configurações iniciais da interface
-        // Será implementado nos próximos passos
+    private fun setupHomeFragment() {
+        val fragment = HomeFragment()
+        supportFragmentManager.beginTransaction()
+            .replace(binding.fragmentContainer.id, fragment)
+            .commit()
     }
 }
